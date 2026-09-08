@@ -359,22 +359,36 @@ h2 {
   flex-wrap: wrap;
   gap: 0.25rem 1.25rem;
   margin: 0;
-  padding-left: 1.05rem;
+  padding: 0;
+  list-style: none;
 }
 
 .skills-grid li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
   color: var(--muted);
   border-radius: 0.25rem;
+  line-height: 1.45;
   transition: color 160ms ease, transform 160ms ease;
+  white-space: nowrap;
 }
 
-.skills-grid li::marker {
+.skill-icon {
   color: var(--copper);
+  font-size: 1.05rem;
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+  transition: color 160ms ease;
 }
 
 .skills-grid li:hover {
   color: var(--accent);
   transform: translateY(-1px);
+}
+
+.skills-grid li:hover .skill-icon {
+  color: var(--accent);
 }
 
 .forging-status {
